@@ -19,7 +19,7 @@ class Login extends Base1 {
     get btnSubmit () {
         return $('#login-button');
     }
-    
+
     get errorMessage () {
         return $('.error-message-container');
     }
@@ -27,7 +27,13 @@ class Login extends Base1 {
     credentials = {
        users: [ "standard_user", "problem_user", "performance_glitch_user", "error_user", "visual_user" ],
        lockedUser: "locked_out_user",
-       universalPass: "secret_sauce"
+       universalPass: "secret_sauce",
+       badPass: "gobbiltygook",
+       misspelledUser: [ "standerd_user", "problemm_user", "performince_glitch_userr", "eror_user", "visaul_user", "locked_user" ],
+       no_Pass: "secretsauce",
+       no_User: ["standarduser", "problemuser", "performanceglitchuser", "erroruser", "visualuser", "lockedoutuser" ],
+       noPassword: "",
+       noUsername: "",
     }
 
     /**
