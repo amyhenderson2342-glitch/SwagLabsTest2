@@ -9,10 +9,9 @@ describe('My Login application', () => {
             await Login.open();
             await Login.login(Login.credentials.users[i], Login.credentials.universalPass)
             await expect(Products.productTitle).toHaveText('Products');
-                
-        
         }
-        await Cart.addToCart.click()
-                await expect(Cart.cartBadge).toExist();
+    await Login.open();
+    await Login.login(Login.credentials.lockedUser, Login.credentials.universalPass)
+    await expect(Login.errorMessage).toHaveText('Epic sadface: Sorry, this user has been locked out.');
     });
 });

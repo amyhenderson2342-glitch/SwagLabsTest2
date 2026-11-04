@@ -19,9 +19,14 @@ class Login extends Base1 {
     get btnSubmit () {
         return $('#login-button');
     }
+    
+    get errorMessage () {
+        return $('.error-message-container');
+    }
 
     credentials = {
-       users: [ "problem_user", "error_user", "visual_user", "standard_user" ],
+       users: [ "standard_user", "problem_user", "performance_glitch_user", "error_user", "visual_user" ],
+       lockedUser: "locked_out_user",
        universalPass: "secret_sauce"
     }
 
