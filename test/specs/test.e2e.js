@@ -22,8 +22,6 @@ describe('My Login application', () => {
 
 describe('My Login application', () => {
    async function loginWithInvalidCredentials(username, password, errrorMessage) {
-    await Login.open();
-    await Login.login(username, password)
     await expect(Login.errorMessage).toHaveText('Epic sadface: Username and password do not match any user in this service');
    }       
     it('should not login with invalid credentials', async () => {
